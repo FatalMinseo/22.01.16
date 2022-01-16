@@ -8,13 +8,13 @@ import java.util.Scanner;
 
 public class LandDAO {
 
-	// DAO -> DataBase Access Object
-	// µ¥ÀÌÅÍ º£ÀÌ½º¿¡ Á¢±ÙÇÏ±â À§ÇÑ °´Ã¼¸¦ ¸¸µé ¼ö ÀÖ´Â Å¬·¡½º
+	// DAO -> DataBase Access Object 
+	// ë°ì´í„° ë² ì´ìŠ¤ì— ì ‘ê·¼í•˜ê¸° ìœ„í•œ ê°ì²´ë¥¼ ë§Œë“¤ ìˆ˜ ìˆëŠ” í´ë˜ìŠ¤
 	private Connection conn;
 	private PreparedStatement psmt;
 	private ResultSet rs;
 
-	// µå¶óÀÌ¹ö ·Îµù°ú Ä¿³Ø¼Ç °´Ã¼¸¦ °¡Á®¿À´Â ¸Ş¼Òµå
+	// ë“œë¼ì´ë²„ ë¡œë”©ê³¼ ì»¤ë„¥ì…˜ ê°ì²´ë¥¼ ê°€ì ¸ì˜¤ëŠ” ë©”ì†Œë“œ
 	private void getConnection() {
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
@@ -33,7 +33,7 @@ public class LandDAO {
 		}
 	}
 
-	// DataBase¿Í ¿¬°áÀ» ²÷¾îÁÖ´Â ¸Ş¼Òµå
+	// DataBaseì™€ ì—°ê²°ì„ ëŠì–´ì£¼ëŠ” ë©”ì†Œë“œ
 	private void close() {
 		try {
 			if (psmt != null) {
